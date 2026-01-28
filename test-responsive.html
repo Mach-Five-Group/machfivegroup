@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Responsive</title>
+    <link rel="stylesheet" href="/css/recruitment.css">
+    <style>
+        body {
+            background: #000;
+            color: white;
+            margin: 0;
+            padding: 20px;
+        }
+        .test-info {
+            background: rgba(255,255,255,0.1);
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        @media (max-width: 768px) {
+            .test-info::after {
+                content: " - MOBILE VIEW ACTIVE";
+                color: #dd4124;
+            }
+        }
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .test-info::after {
+                content: " - TABLET VIEW ACTIVE";
+                color: #dd4124;
+            }
+        }
+        @media (min-width: 1025px) {
+            .test-info::after {
+                content: " - DESKTOP VIEW ACTIVE";
+                color: #dd4124;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="test-info">
+        Current Viewport Width: <span id="width"></span>px
+    </div>
+
+    <!-- Network Section -->
+    <section class="network-section">
+        <div class="network-section__container">
+            <div class="network-graph">
+                <div class="network-center-node">
+                    <h2>How We Source<br>Top Talent</h2>
+                </div>
+                <div class="network-orbit"></div>
+                <svg class="network-lines" viewBox="0 0 100 100" preserveAspectRatio="none">
+                    <line x1="50" y1="50" x2="15" y2="23" stroke="rgba(221, 65, 36, 0.3)" stroke-width="0.3" stroke-dasharray="2,2"/>
+                    <line x1="50" y1="50" x2="50" y2="15" stroke="rgba(221, 65, 36, 0.3)" stroke-width="0.3" stroke-dasharray="2,2"/>
+                    <line x1="50" y1="50" x2="85" y2="23" stroke="rgba(221, 65, 36, 0.3)" stroke-width="0.3" stroke-dasharray="2,2"/>
+                    <line x1="50" y1="50" x2="15" y2="77" stroke="rgba(221, 65, 36, 0.3)" stroke-width="0.3" stroke-dasharray="2,2"/>
+                    <line x1="50" y1="50" x2="50" y2="85" stroke="rgba(221, 65, 36, 0.3)" stroke-width="0.3" stroke-dasharray="2,2"/>
+                    <line x1="50" y1="50" x2="85" y2="77" stroke="rgba(221, 65, 36, 0.3)" stroke-width="0.3" stroke-dasharray="2,2"/>
+                </svg>
+                <div class="network-sources network-sources--radial">
+                    <div class="network-source">
+                        <div class="network-source__icon">🌐</div>
+                        <h3 class="network-source__title">Portfolio Companies</h3>
+                        <p class="network-source__description">Direct access to talent from our portfolio ecosystem</p>
+                    </div>
+                    <div class="network-source">
+                        <div class="network-source__icon">🎓</div>
+                        <h3 class="network-source__title">University Partners</h3>
+                        <p class="network-source__description">Fresh graduates from top engineering programs</p>
+                    </div>
+                    <div class="network-source">
+                        <div class="network-source__icon">💼</div>
+                        <h3 class="network-source__title">Industry Networks</h3>
+                        <p class="network-source__description">Seasoned professionals from our extensive network</p>
+                    </div>
+                    <div class="network-source">
+                        <div class="network-source__icon">🚀</div>
+                        <h3 class="network-source__title">Startup Alumni</h3>
+                        <p class="network-source__description">Battle-tested talent from successful exits</p>
+                    </div>
+                    <div class="network-source">
+                        <div class="network-source__icon">🔬</div>
+                        <h3 class="network-source__title">Research Labs</h3>
+                        <p class="network-source__description">Specialists from cutting-edge research institutions</p>
+                    </div>
+                    <div class="network-source">
+                        <div class="network-source__icon">🏆</div>
+                        <h3 class="network-source__title">Competition Winners</h3>
+                        <p class="network-source__description">Top performers from hackathons and challenges</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function updateWidth() {
+            document.getElementById('width').textContent = window.innerWidth;
+        }
+        updateWidth();
+        window.addEventListener('resize', updateWidth);
+    </script>
+</body>
+</html>

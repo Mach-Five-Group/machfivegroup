@@ -1,0 +1,551 @@
+---
+title: "Recruitment - Tap Into Our Network. Find Your Next Star."
+description: "Leverage our extensive network to find pre-vetted, high-caliber talent that traditional recruiting can't reach"
+---
+
+<link rel="stylesheet" href="/css/recruitment.css">
+
+<style>
+/* Hero Styles */
+.recruitment-hero {
+    padding: 120px 24px 80px;
+    background: var(--dark-bg-secondary);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.recruitment-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/img/whiteboard.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.03;
+    z-index: 1;
+}
+
+.recruitment-hero::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse 70% 60% at center, rgba(255, 255, 255, 0.12) 0%, transparent 70%);
+    z-index: 2;
+}
+
+.recruitment-hero__content {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 3;
+}
+
+.recruitment-hero h1 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 300;
+    margin-bottom: 24px;
+    line-height: 1.2;
+    color: var(--dark-text-primary);
+}
+
+/* Breadcrumb Styles */
+.breadcrumb {
+    padding: 32px 0 20px 0;
+    background: var(--dark-bg-secondary);
+    border-bottom: 1px solid var(--dark-border-secondary);
+    position: relative;
+    z-index: 1;
+}
+
+.breadcrumb-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.breadcrumb-list {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    list-style: none;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+}
+
+.breadcrumb-list a {
+    color: var(--dark-text-secondary);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.breadcrumb-list a:hover {
+    color: var(--m5-accent);
+}
+
+.breadcrumb-list li:not(:last-child)::after {
+    content: '/';
+    margin-left: 16px;
+    color: var(--dark-border-primary);
+}
+
+.breadcrumb-list li:last-child {
+    color: var(--m5-accent);
+    font-weight: 500;
+}
+
+/* Approach Section with Parallax Background */
+.approach-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.approach-background {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    right: 0;
+    bottom: -100%;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+    transform: translateZ(0);
+    will-change: transform;
+    z-index: 1;
+}
+
+.approach-background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        linear-gradient(rgba(200, 200, 200, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(200, 200, 200, 0.03) 1px, transparent 1px);
+    background-size: 80px 80px;
+    mask-image: linear-gradient(90deg,
+        transparent 0%,
+        black 15%,
+        black 85%,
+        transparent 100%);
+    pointer-events: none;
+}
+
+.approach-background::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1200px;
+    height: 800px;
+    background: radial-gradient(ellipse at center,
+        rgba(255, 255, 255, 0.06) 0%,
+        rgba(255, 255, 255, 0.04) 20%,
+        rgba(255, 255, 255, 0.02) 35%,
+        rgba(255, 255, 255, 0.01) 50%,
+        transparent 70%
+    );
+    pointer-events: none;
+}
+
+.approach-section {
+    position: relative;
+    z-index: 2;
+    padding: 120px 24px;
+}
+
+/* Process Section with Parallax Background */
+.process-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.process-background {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    right: 0;
+    bottom: -100%;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+    transform: translateZ(0);
+    will-change: transform;
+    z-index: 1;
+}
+
+.process-background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        linear-gradient(rgba(200, 200, 200, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(200, 200, 200, 0.03) 1px, transparent 1px);
+    background-size: 80px 80px;
+    mask-image: linear-gradient(90deg,
+        transparent 0%,
+        black 15%,
+        black 85%,
+        transparent 100%);
+    pointer-events: none;
+}
+
+.process-background::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1200px;
+    height: 800px;
+    background: radial-gradient(ellipse at center,
+        rgba(255, 255, 255, 0.06) 0%,
+        rgba(255, 255, 255, 0.04) 20%,
+        rgba(255, 255, 255, 0.02) 35%,
+        rgba(255, 255, 255, 0.01) 50%,
+        transparent 70%
+    );
+    pointer-events: none;
+}
+</style>
+
+<!-- Hero Section -->
+<section class="recruitment-hero">
+    <div class="recruitment-hero__content">
+        <h1>Tap Into Our Network. Find Your Next Star.</h1>
+    </div>
+</section>
+
+<!-- Breadcrumb -->
+<nav class="breadcrumb">
+    <div class="breadcrumb-container">
+        <ul class="breadcrumb-list">
+            <li><a href="/">Home</a></li>
+            <li>Services</li>
+            <li>Recruitment</li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Our Approach -->
+<section class="approach-wrapper">
+    <div class="approach-background"></div>
+    <div class="approach-section">
+        <div class="approach-section__container">
+            <h2 class="approach-section__title">Network-First Recruiting</h2>
+            <p class="approach-section__subtitle">Three pillars that set us apart</p>
+            <div class="pillars-grid">
+                <div class="pillar-card">
+                    <div class="pillar-card__number">1</div>
+                    <h3 class="pillar-card__title">Network Sourcing</h3>
+                    <p class="pillar-card__description">We tap into our ecosystem of industry professionals to identify talent that isn't on the market. These are people we've worked with, learned from, and trust.</p>
+                </div>
+                <div class="pillar-card">
+                    <div class="pillar-card__number">2</div>
+                    <h3 class="pillar-card__title">Technical Vetting</h3>
+                    <p class="pillar-card__description">Industry experts from our network validate skills through real-world assessments. No generic tests—actual practitioners evaluate actual skills.</p>
+                </div>
+                <div class="pillar-card">
+                    <div class="pillar-card__number">3</div>
+                    <h3 class="pillar-card__title">Culture Matching</h3>
+                    <p class="pillar-card__description">We understand your team dynamics and ensure alignment. Our network insights reveal how candidates truly collaborate and contribute.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Service Offerings -->
+<section class="services-section">
+    <div class="services-section__container">
+        <h2 class="services-section__title">Recruitment Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <svg class="service-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                    <path d="M16 11l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2"/>
+                </svg>
+                <h3 class="service-card__title">Executive Search</h3>
+                <p class="service-card__description">C-suite and senior leadership positions requiring deep industry knowledge and proven track records.</p>
+            </div>
+            <div class="service-card">
+                <svg class="service-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+                </svg>
+                <h3 class="service-card__title">Technical Recruiting</h3>
+                <p class="service-card__description">Engineers, architects, and technical leads vetted by peers who understand the technology stack.</p>
+            </div>
+            <div class="service-card">
+                <svg class="service-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/>
+                </svg>
+                <h3 class="service-card__title">Team Building</h3>
+                <p class="service-card__description">Assemble entire teams for new initiatives, ensuring complementary skills and collaborative dynamics.</p>
+            </div>
+            <div class="service-card">
+                <svg class="service-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                </svg>
+                <h3 class="service-card__title">Contract-to-Hire</h3>
+                <p class="service-card__description">Try before you commit with structured evaluation periods and smooth transition paths.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Process Timeline -->
+<section class="process-wrapper">
+    <div class="process-background"></div>
+    <div class="process-section">
+        <div class="process-section__container">
+        <h2 class="process-section__title">Our Process</h2>
+        <div class="process-timeline" data-timeline>
+            <div class="timeline-progress">
+                <div class="timeline-progress__line"></div>
+                <div class="timeline-progress__fill"></div>
+            </div>
+
+            <div class="process-node" data-step="1">
+                <div class="process-node__connector"></div>
+                <div class="process-node__circle">
+                    <span class="process-node__number">1</span>
+                    <div class="process-node__pulse"></div>
+                </div>
+                <div class="process-node__content">
+                    <h3 class="process-node__title">Discovery Call</h3>
+                    <p class="process-node__description">We dive deep to understand your needs, culture, technical requirements, and what success looks like for this role.</p>
+                    <div class="process-node__duration">Day 1</div>
+                </div>
+            </div>
+
+            <div class="process-node" data-step="2">
+                <div class="process-node__connector"></div>
+                <div class="process-node__circle">
+                    <span class="process-node__number">2</span>
+                    <div class="process-node__pulse"></div>
+                </div>
+                <div class="process-node__content">
+                    <h3 class="process-node__title">Network Activation</h3>
+                    <p class="process-node__description">We leverage our connections to identify candidates, including those not actively looking but open to the right opportunity.</p>
+                    <div class="process-node__duration">Days 2-5</div>
+                </div>
+            </div>
+
+            <div class="process-node" data-step="3">
+                <div class="process-node__connector"></div>
+                <div class="process-node__circle">
+                    <span class="process-node__number">3</span>
+                    <div class="process-node__pulse"></div>
+                </div>
+                <div class="process-node__content">
+                    <h3 class="process-node__title">Technical Vetting</h3>
+                    <p class="process-node__description">Industry experts from our network assess skills through practical evaluations and peer reviews.</p>
+                    <div class="process-node__duration">Days 6-10</div>
+                </div>
+            </div>
+
+            <div class="process-node" data-step="4">
+                <div class="process-node__connector"></div>
+                <div class="process-node__circle">
+                    <span class="process-node__number">4</span>
+                    <div class="process-node__pulse"></div>
+                </div>
+                <div class="process-node__content">
+                    <h3 class="process-node__title">Cultural Assessment</h3>
+                    <p class="process-node__description">We evaluate team fit through our network insights and structured behavioral assessments.</p>
+                    <div class="process-node__duration">Days 11-14</div>
+                </div>
+            </div>
+
+            <div class="process-node" data-step="5">
+                <div class="process-node__connector"></div>
+                <div class="process-node__circle">
+                    <span class="process-node__number">5</span>
+                    <div class="process-node__pulse"></div>
+                </div>
+                <div class="process-node__content">
+                    <h3 class="process-node__title">Curated Presentation</h3>
+                    <p class="process-node__description">You receive a shortlist of pre-vetted candidates with detailed assessments and our recommendations.</p>
+                    <div class="process-node__duration">Day 15</div>
+                </div>
+            </div>
+
+            <div class="process-node" data-step="6">
+                <div class="process-node__connector"></div>
+                <div class="process-node__circle">
+                    <span class="process-node__number">6</span>
+                    <div class="process-node__pulse"></div>
+                </div>
+                <div class="process-node__content">
+                    <h3 class="process-node__title">Offer Support</h3>
+                    <p class="process-node__description">We assist through negotiation and onboarding, ensuring a smooth transition for both parties.</p>
+                    <div class="process-node__duration">Ongoing</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+
+<!-- Network Section -->
+<section class="network-section">
+    <div class="network-section__container">
+        <h2 class="network-section__title">Why Our Network Matters</h2>
+        <div class="network-stats">
+            <div class="network-stat">
+                <div class="network-stat__number">500+</div>
+                <div class="network-stat__label">Industry Professionals</div>
+            </div>
+            <div class="network-stat">
+                <div class="network-stat__number">15+</div>
+                <div class="network-stat__label">Years of Relationships</div>
+            </div>
+            <div class="network-stat">
+                <div class="network-stat__number">3 Weeks</div>
+                <div class="network-stat__label">Average Time to Fill</div>
+            </div>
+            <div class="network-stat">
+                <div class="network-stat__number">92%</div>
+                <div class="network-stat__label">Placement Success Rate</div>
+            </div>
+        </div>
+        <div class="network-types">
+            <div class="network-type">
+                <svg class="network-type__icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                </svg>
+                <span class="network-type__text">Former Colleagues</span>
+            </div>
+            <div class="network-type">
+                <svg class="network-type__icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M19 10h-2V7a3 3 0 00-6 0v3H9a1 1 0 00-1 1v9a1 1 0 001 1h10a1 1 0 001-1v-9a1 1 0 00-1-1zM13 7a1 1 0 112 0v3h-2V7z"/>
+                </svg>
+                <span class="network-type__text">Conference Speakers</span>
+            </div>
+            <div class="network-type">
+                <svg class="network-type__icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 15l-8 5V4l8 5V2l8 10-8 10v-7z"/>
+                </svg>
+                <span class="network-type__text">Open Source Contributors</span>
+            </div>
+            <div class="network-type">
+                <svg class="network-type__icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                </svg>
+                <span class="network-type__text">Startup Advisors</span>
+            </div>
+            <div class="network-type">
+                <svg class="network-type__icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M10 18a8 8 0 100-16 8 8 0 000 16zM14.993 9L10 13.993 6.007 10 10 6.007 14.993 10z"/>
+                </svg>
+                <span class="network-type__text">Industry Veterans</span>
+            </div>
+            <div class="network-type">
+                <svg class="network-type__icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/>
+                </svg>
+                <span class="network-type__text">Technical Leaders</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section" id="contact-form">
+    <div class="cta-section__container">
+        <h2 class="cta-section__title">Ready to Find Your Next Star?</h2>
+        <p class="cta-section__subtitle">Let's discuss how our network can help build your team</p>
+        <form class="cta-form" action="#" method="POST">
+            <div class="form-grid">
+                <div class="form-group">
+                    <label class="form-label" for="company">Company Name *</label>
+                    <input type="text" id="company" name="company" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="name">Your Name *</label>
+                    <input type="text" id="name" name="name" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="email">Email *</label>
+                    <input type="email" id="email" name="email" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone" class="form-input">
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="role">Role(s) to Fill *</label>
+                    <input type="text" id="role" name="role" class="form-input" required placeholder="e.g., Senior Backend Engineer">
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="timeline">Timeline</label>
+                    <input type="text" id="timeline" name="timeline" class="form-input" placeholder="e.g., Within 30 days">
+                </div>
+                <div class="form-group form-group--full">
+                    <label class="form-label" for="message">Additional Details</label>
+                    <textarea id="message" name="message" class="form-textarea" placeholder="Tell us more about your needs, team, or any specific requirements..."></textarea>
+                </div>
+            </div>
+            <button type="submit" class="form-submit">Start Your Search</button>
+        </form>
+    </div>
+</section>
+
+<script src="/js/recruitment.js" defer></script>
+
+<script>
+// Parallax effect for approach and process sections
+(function() {
+    const sections = [
+        { bg: '.approach-background', wrapper: '.approach-wrapper' },
+        { bg: '.process-background', wrapper: '.process-wrapper' }
+    ];
+
+    let ticking = false;
+
+    function updateParallax() {
+        const scrolled = window.pageYOffset;
+
+        sections.forEach(section => {
+            const parallaxBg = document.querySelector(section.bg);
+            const wrapper = document.querySelector(section.wrapper);
+
+            if (!parallaxBg || !wrapper) return;
+
+            const rect = wrapper.getBoundingClientRect();
+            const speed = 0.3;
+
+            // Only apply parallax when section is in viewport
+            if (rect.bottom >= -200 && rect.top <= window.innerHeight + 200) {
+                const yPos = -(scrolled - wrapper.offsetTop) * speed;
+                parallaxBg.style.transform = `translateY(${yPos}px) translateZ(0)`;
+            }
+        });
+
+        ticking = false;
+    }
+
+    function requestTick() {
+        if (!ticking) {
+            window.requestAnimationFrame(updateParallax);
+            ticking = true;
+        }
+    }
+
+    window.addEventListener('scroll', requestTick);
+    window.addEventListener('resize', requestTick);
+
+    // Initial call
+    updateParallax();
+})();
+</script>

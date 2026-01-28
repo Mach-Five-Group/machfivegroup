@@ -132,4 +132,269 @@
 
  &lt;div class="no-results" id="no-results" style="display: none;"&gt;
  &lt;h3&gt;No positions match your filters&lt;/h3&gt;
- &lt;p&gt;Try adjusting your filters or check back soon for new opportunities.&lt;/p&gt;</description></item><item><title>Full Stack Engineer - Mach Five Tech</title><link>https://www.machfivegroup.com/jobs/fullstack-engineer/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.machfivegroup.com/jobs/fullstack-engineer/</guid><description/></item><item><title>Senior Backend Engineer - Stream Sync Engage</title><link>https://www.machfivegroup.com/jobs/senior-backend-engineer/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.machfivegroup.com/jobs/senior-backend-engineer/</guid><description/></item><item><title>Senior Performance Marketing Manager - Mach Five Marketing</title><link>https://www.machfivegroup.com/jobs/senior-performance-marketing-manager/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.machfivegroup.com/jobs/senior-performance-marketing-manager/</guid><description/></item></channel></rss>
+ &lt;p&gt;Try adjusting your filters or check back soon for new opportunities.&lt;/p&gt;</description></item><item><title>Full Stack Engineer - Mach Five Tech</title><link>https://www.machfivegroup.com/jobs/fullstack-engineer/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.machfivegroup.com/jobs/fullstack-engineer/</guid><description/></item><item><title>Recruitment - Tap Into Our Network. Find Your Next Star.</title><link>https://www.machfivegroup.com/recruitment/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.machfivegroup.com/recruitment/</guid><description>&lt;link rel="stylesheet" href="https://www.machfivegroup.com/css/recruitment.css"&gt;
+&lt;link rel="stylesheet" href="https://www.machfivegroup.com/css/network-responsive-fix.css"&gt;
+
+&lt;style&gt;
+/* Hero Styles */
+.recruitment-hero {
+ padding: 120px 24px 80px;
+ background: var(--dark-bg-secondary);
+ text-align: center;
+ position: relative;
+ overflow: hidden;
+}
+
+.recruitment-hero::before {
+ content: '';
+ position: absolute;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ background-image: url('/img/whiteboard.jpg');
+ background-size: cover;
+ background-position: center;
+ opacity: 0.03;
+ z-index: 1;
+}
+
+.recruitment-hero::after {
+ content: '';
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ width: 100%;
+ height: 100%;
+ background: radial-gradient(ellipse 70% 60% at center, rgba(255, 255, 255, 0.12) 0%, transparent 70%);
+ z-index: 2;
+}
+
+.recruitment-hero__content {
+ max-width: 900px;
+ margin: 0 auto;
+ position: relative;
+ z-index: 3;
+}
+
+.recruitment-hero h1 {
+ font-size: clamp(2.5rem, 5vw, 3.5rem);
+ font-weight: 300;
+ margin-bottom: 24px;
+ line-height: 1.2;
+ color: var(--dark-text-primary);
+}
+
+.recruitment-hero__subtitle {
+ font-size: 1.125rem;
+ opacity: 0.85;
+ line-height: 1.5;
+ margin-bottom: 40px;
+ max-width: 600px;
+ margin-left: auto;
+ margin-right: auto;
+}
+
+.recruitment-hero__process {
+ margin-top: 40px;
+ padding-top: 40px;
+ border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.recruitment-hero__process h2 {
+ font-size: 1.125rem;
+ font-weight: 600;
+ margin-bottom: 24px;
+ opacity: 0.9;
+}
+
+.recruitment-hero__pillars {
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
+ gap: 20px;
+ max-width: 1000px;
+ margin: 0 auto;
+}
+
+.recruitment-hero__pillar {
+ background: rgba(255, 255, 255, 0.03);
+ border: 1px solid rgba(255, 255, 255, 0.08);
+ border-radius: 8px;
+ padding: 20px;
+ display: flex;
+ gap: 16px;
+ text-align: left;
+ transition: all 0.3s ease;
+}
+
+.recruitment-hero__pillar:hover {
+ background: rgba(255, 255, 255, 0.05);
+ transform: translateY(-2px);
+}
+
+.recruitment-hero__pillar-number {
+ flex-shrink: 0;
+ width: 32px;
+ height: 32px;
+ background: var(--m5-accent);
+ color: white;
+ border-radius: 50%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ font-size: 0.875rem;
+ font-weight: 700;
+}
+
+.recruitment-hero__pillar-content h3 {
+ font-size: 1rem;
+ font-weight: 600;
+ margin-bottom: 8px;
+ color: white;
+}
+
+.recruitment-hero__pillar-content p {
+ font-size: 0.875rem;
+ color: var(--dark-text-secondary);
+ line-height: 1.5;
+ margin: 0;
+}
+
+@media (max-width: 768px) {
+ .recruitment-hero {
+ padding: 100px 16px 60px;
+ }
+
+ .recruitment-hero h1 {
+ font-size: 2rem;
+ }
+
+ .recruitment-hero__subtitle {
+ font-size: 1rem;
+ margin-bottom: 32px;
+ }
+
+ .recruitment-hero__process {
+ margin-top: 32px;
+ padding-top: 32px;
+ }
+
+ .recruitment-hero__pillars {
+ grid-template-columns: 1fr;
+ gap: 12px;
+ }
+
+ .recruitment-hero__pillar {
+ padding: 12px;
+ }
+}
+
+/* Breadcrumb Styles */
+.breadcrumb {
+ padding: 32px 0 20px 0;
+ background: var(--dark-bg-secondary);
+ border-bottom: 1px solid var(--dark-border-secondary);
+ position: relative;
+ z-index: 1;
+}
+
+.breadcrumb-container {
+ max-width: 1400px;
+ margin: 0 auto;
+ padding: 0 24px;
+}
+
+.breadcrumb-list {
+ display: flex;
+ align-items: center;
+ gap: 16px;
+ list-style: none;
+ font-size: 14px;
+ margin: 0;
+ padding: 0;
+}
+
+.breadcrumb-list a {
+ color: var(--dark-text-secondary);
+ text-decoration: none;
+ transition: color 0.2s;
+}
+
+.breadcrumb-list a:hover {
+ color: var(--m5-accent);
+}
+
+.breadcrumb-list li:not(:last-child)::after {
+ content: '/';
+ margin-left: 16px;
+ color: var(--dark-border-primary);
+}
+
+.breadcrumb-list li:last-child {
+ color: var(--m5-accent);
+ font-weight: 500;
+}
+
+
+/* Combined Process and Network Section with Shared Parallax Background */
+.process-network-wrapper {
+ position: relative;
+ overflow: hidden;
+}
+
+.process-network-background {
+ position: absolute;
+ top: -50%;
+ left: 0;
+ right: 0;
+ bottom: -50%;
+ background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+ transform: translateZ(0);
+ will-change: transform;
+ z-index: 0;
+}
+
+.process-network-background::before {
+ content: '';
+ position: absolute;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ background:
+ linear-gradient(rgba(200, 200, 200, 0.03) 1px, transparent 1px),
+ linear-gradient(90deg, rgba(200, 200, 200, 0.03) 1px, transparent 1px);
+ background-size: 80px 80px;
+ mask-image: linear-gradient(90deg,
+ transparent 0%,
+ black 15%,
+ black 85%,
+ transparent 100%);
+ pointer-events: none;
+}
+
+.process-network-background::after {
+ content: '';
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ width: 1200px;
+ height: 800px;
+ background: radial-gradient(ellipse at center,
+ rgba(255, 255, 255, 0.06) 0%,
+ rgba(255, 255, 255, 0.04) 20%,
+ rgba(255, 255, 255, 0.02) 35%,
+ rgba(255, 255, 255, 0.01) 50%,
+ transparent 70%
+ );
+ pointer-events: none;
+}
+&lt;/style&gt;
+
+&lt;!-- Hero Section --&gt;
+&lt;section class="recruitment-hero"&gt;
+ &lt;div class="recruitment-hero__content"&gt;
+ &lt;h1&gt;Tap Into Our Network.&lt;br&gt;Find Your Next Star.&lt;/h1&gt;
+ &lt;p class="recruitment-hero__subtitle"&gt;Network-First recruiting from our exclusive channels.&lt;/p&gt;</description></item><item><title>Senior Backend Engineer - Stream Sync Engage</title><link>https://www.machfivegroup.com/jobs/senior-backend-engineer/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.machfivegroup.com/jobs/senior-backend-engineer/</guid><description/></item><item><title>Senior Performance Marketing Manager - Mach Five Marketing</title><link>https://www.machfivegroup.com/jobs/senior-performance-marketing-manager/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.machfivegroup.com/jobs/senior-performance-marketing-manager/</guid><description/></item></channel></rss>

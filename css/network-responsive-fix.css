@@ -1,0 +1,144 @@
+/* Complete Network Section Responsive Fix */
+
+/* Reset all network elements on mobile */
+@media (max-width: 768px) {
+    /* Very tight spacing for seamless flow on mobile */
+    .network-section {
+        padding: 40px 20px 15px !important;
+        margin-top: 0 !important;
+    }
+
+    /* Container should be simple flex with minimal top padding */
+    .network-graph {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        min-height: auto !important;
+        padding: 0 20px 40px !important;
+        position: relative !important;
+    }
+
+    /* Globe should be larger with better text handling */
+    .network-center-node {
+        position: static !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        transform: none !important;
+        margin: 0 auto 30px !important;
+        width: 140px !important;
+        height: 140px !important;
+        left: auto !important;
+        top: auto !important;
+        padding: 20px !important;
+        overflow: hidden !important;
+    }
+
+    /* Fix text inside globe for better readability */
+    .network-center-node h2 {
+        font-size: 0.75rem !important;
+        line-height: 1.2 !important;
+        letter-spacing: -0.5px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        text-align: center !important;
+        word-wrap: break-word !important;
+        white-space: normal !important;
+        color: white !important;
+        /* Simpler text shadow for mobile */
+        text-shadow:
+            0 1px 2px rgba(0, 0, 0, 0.8),
+            0 0 4px rgba(0, 0, 0, 0.5) !important;
+    }
+
+    /* Hide desktop elements */
+    svg.network-lines,
+    .network-orbit {
+        display: none !important;
+    }
+
+    /* Network sources container should be simple flex column */
+    .network-sources--radial {
+        position: static !important;
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        height: auto !important;
+        gap: 20px !important;
+        top: auto !important;
+        left: auto !important;
+        padding: 0 !important;
+    }
+
+    /* Each network source should be a block */
+    .network-sources--radial .network-source {
+        position: static !important;
+        display: block !important;
+        width: 100% !important;
+        transform: none !important;
+        top: auto !important;
+        left: auto !important;
+        margin: 0 !important;
+        max-width: 400px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    /* Fix the icon positioning */
+    .network-source__icon {
+        margin: 0 auto 1rem !important;
+        display: block !important;
+        width: 36px !important;
+        height: 36px !important;
+    }
+
+    /* Fix text sizes */
+    .network-source__title {
+        font-size: 1.1rem !important;
+    }
+
+    .network-source__description {
+        font-size: 0.85rem !important;
+    }
+
+
+    /* Remove any nth-child positioning */
+    .network-sources--radial .network-source:nth-child(1),
+    .network-sources--radial .network-source:nth-child(2),
+    .network-sources--radial .network-source:nth-child(3),
+    .network-sources--radial .network-source:nth-child(4),
+    .network-sources--radial .network-source:nth-child(5),
+    .network-sources--radial .network-source:nth-child(6) {
+        position: static !important;
+        top: auto !important;
+        left: auto !important;
+        transform: none !important;
+    }
+}
+
+/* Small mobile fixes */
+@media (max-width: 480px) {
+    .network-center-node {
+        width: 120px !important;
+        height: 120px !important;
+        padding: 15px !important;
+    }
+
+    .network-center-node h2 {
+        font-size: 0.65rem !important;
+        line-height: 1.15 !important;
+    }
+
+    .network-sources--radial .network-source {
+        padding: 1.25rem !important;
+    }
+
+    .network-section {
+        padding: 30px 15px 10px !important;
+        margin-top: 0 !important;
+    }
+
+    .network-graph {
+        padding: 0 15px 30px !important;
+    }
+}
